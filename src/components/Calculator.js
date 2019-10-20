@@ -25,7 +25,7 @@ class Calculator extends React.Component {
 			backgroundColor: "#1A1A1A"
 		};
 
-		const { icons } = this.state.icons;
+		const { icons } = this.state;
 
 		return (
 			<div className="calculator" style={calculatorStyling}>
