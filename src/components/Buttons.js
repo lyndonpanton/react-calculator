@@ -17,7 +17,7 @@ class Buttons extends React.Component {
 
 		const buttons = this.props.icons.map((icon, index) => {
 			return (
-				<Button key={index} icon={icon} handleClick={() => 0} />
+				<Button buttonKey={index} icon={icon} handleClick={() => 0} />
 			);
 		});
 
