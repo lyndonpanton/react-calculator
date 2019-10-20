@@ -66,7 +66,13 @@ class Calculator extends React.Component {
 			case "0":
 				this.setState({
 					value: value + icon
-				});				break;
+				});
+				break;
+			case "<=":
+				this.setState({
+					value: value.slice(0, value.length - 1)
+				});
+				break;
 			case "=":
 				this.setState({
 					value: eval(value)
