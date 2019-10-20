@@ -19,7 +19,7 @@ class Calculator extends React.Component {
 	}
 
 	handleClick = (icon) => {
-		const value = this.state.value;
+		let value = this.state.value;
 		const memory = this.state.memory;
 
 		switch(icon) {
@@ -74,6 +74,8 @@ class Calculator extends React.Component {
 				});
 				break;
 			case "=":
+				value = value.replace("x", "*").replace("^", "**");
+
 				this.setState({
 					value: eval(value)
 				});
