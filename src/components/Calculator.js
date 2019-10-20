@@ -13,14 +13,41 @@ class Calculator extends React.Component {
 				"1", "2", "3", "^",
 				"%", "0", ".", "="
 			],
-			value: ""
+			memory: 0,
+			value: "",
 		};
 	}
 
 	handleClick = (icon) => {
 		const value = this.state.value;
-		
+		const memory = this.state.memory;
+
 		switch(icon) {
+			case "mc":
+				this.setState({
+					memory: 0
+				});
+				break;
+			case "m+":
+				this.setState({
+					memory: memory + value
+				});
+				break;
+			case "m-":
+				this.setState({
+					memory: memory - value
+				});
+				break;
+			case "mr":
+				this.setState({
+					value: memory
+				});
+				break;
+			case "c":
+				this.setState({
+					value: ""
+				});
+				break;
 			case "/":
 			case "x":
 			case "7":
