@@ -17,6 +17,10 @@ class Calculator extends React.Component {
 		};
 	}
 
+	handleClick = () => {
+
+	}
+
 	render() {
 		const calculatorStyling = {
 			border: "#FF8200 solid 3px",
@@ -31,7 +35,7 @@ class Calculator extends React.Component {
 		return (
 			<div className="calculator" style={calculatorStyling}>
 				<Display icons={icons} value={value} />
-				<Buttons icons={icons} />
+				<Buttons icons={icons} handleClick={this.handleClick} />
 			</div>
 		);
 	}
