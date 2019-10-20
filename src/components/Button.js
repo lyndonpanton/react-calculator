@@ -1,8 +1,10 @@
 import React from "react";
 
 const Button = (props) => {
+	const { buttonKey, icon, handleClick } = props;
+
 	return (
-		<button onChange={props.handleClick}>{props.icon}</button>
+		<button key={buttonKey} onChange={handleClick}>{icon}</button>
 	);
 };
 
