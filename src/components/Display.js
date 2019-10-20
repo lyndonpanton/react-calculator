@@ -22,7 +22,7 @@ const Display = (props) => {
 
 	return (
 		<div className="display" style={displayStyling}>
-			<output style={outputStyling}></output>
+			<output style={outputStyling}>{props.value}</output>
 		</div>
 	);
 };
