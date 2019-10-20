@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 class Buttons extends React.Component {
 	constructor(props) {
@@ -14,9 +15,15 @@ class Buttons extends React.Component {
 			height: "280px",
 		};
 
+		const buttons = this.props.icons.map((icon, index) => {
+			return (
+				<Button key={index} icon={icon} handleClick={() => 0} />
+			);
+		});
+
 		return (
 			<div className="buttons" style={buttonsStyling}>
-
+				{  buttons  }
 			</div>
 		);
 	}
