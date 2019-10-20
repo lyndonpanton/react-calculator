@@ -17,8 +17,37 @@ class Calculator extends React.Component {
 		};
 	}
 
-	handleClick = () => {
-
+	handleClick = (icon) => {
+		const value = this.state.value;
+		
+		switch(icon) {
+			case "/":
+			case "x":
+			case "7":
+			case "8":
+			case "9":
+			case "-":
+			case "4":
+			case "5":
+			case "6":
+			case "+":
+			case "1":
+			case "2":
+			case "3":
+			case "^":
+			case "%":
+			case "0":
+				this.setState({
+					value: value + icon
+				});				break;
+			case "=":
+				this.setState({
+					value: eval(value)
+				});
+				break;
+			default:
+				console.log("button not recognised");
+		}
 	}
 
 	render() {
