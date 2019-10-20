@@ -14,7 +14,9 @@ const Button = (props) => {
 	};
 
 	return (
-		<button key={buttonKey} style={buttonStyling} onChange={handleClick}>{icon}</button>
+		<button key={buttonKey} style={buttonStyling} onClick={() => {
+			handleClick(icon);
+		}}>{icon}</button>
 	);
 };
 
