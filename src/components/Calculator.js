@@ -1,4 +1,5 @@
 import React from "react";
+import Display from "./Display";
 
 class Calculator extends React.Component {
 	constructor(props) {
@@ -11,7 +12,7 @@ class Calculator extends React.Component {
 	render() {
 		return (
 			<div className="calculator">
-
+				<Display />
 			</div>
 		);
 	}
