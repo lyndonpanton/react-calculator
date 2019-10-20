@@ -12,7 +12,8 @@ class Calculator extends React.Component {
 				"4", "5", "6", "+",
 				"1", "2", "3", "^",
 				"%", "0", ".", "="
-			]
+			],
+			value: ""
 		};
 	}
 
@@ -25,11 +26,11 @@ class Calculator extends React.Component {
 			backgroundColor: "#1A1A1A"
 		};
 
-		const { icons } = this.state;
+		const { icons, value } = this.state;
 
 		return (
 			<div className="calculator" style={calculatorStyling}>
-				<Display icons={icons} />
+				<Display icons={icons} value={value} />
 				<Buttons icons={icons} />
 			</div>
 		);
