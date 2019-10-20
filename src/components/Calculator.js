@@ -74,11 +74,16 @@ class Calculator extends React.Component {
 				});
 				break;
 			case "=":
-				value = value.replace("x", "*").replace("^", "**");
+				if (isNaN(value[value.length - 1])) {
+					// error logic
+					console.log("equation must end in a number");
+				} else {
+					value = value.replace("x", "*").replace("^", "**");
 
-				this.setState({
-					value: eval(value)
-				});
+					this.setState({
+						value: eval(value)
+					});
+				}
 				break;
 			default:
 				console.log("button not recognised");
