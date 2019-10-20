@@ -30,12 +30,12 @@ class Calculator extends React.Component {
 				break;
 			case "m+":
 				this.setState({
-					memory: memory + value
+					memory: memory + eval(value)
 				});
 				break;
 			case "m-":
 				this.setState({
-					memory: memory - value
+					memory: memory - eval(value)
 				});
 				break;
 			case "mr":
