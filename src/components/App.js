@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import Calculator from "./Calculator";
 
 class App extends React.Component {
@@ -6,7 +7,7 @@ class App extends React.Component {
 		return (
 			<div className="app">
 				<header>
-					<h1>React Calculator</h1>
+					<Header />
 					<Calculator />
 				</header>
 			</div>
