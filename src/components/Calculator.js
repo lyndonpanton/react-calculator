@@ -19,6 +19,8 @@ class Calculator extends React.Component {
 	}
 
 	handleClick = (icon) => {
+		const { changeError } = this.props;
+
 		let value = String(this.state.value);
 		const memory = this.state.memory;
 
@@ -27,36 +29,44 @@ class Calculator extends React.Component {
 				this.setState({
 					memory: 0
 				});
+
+				changeError("Ok");
 				break;
 			case "m+":
 				if (isNaN(value[value.length - 1])) {
-					// error logic
-					console.log("equation must end in a number");;
+					changeError("equation must end in a number");;
 				} else {
 					this.setState({
 						memory: memory + eval(value)
 					});
+
+					changeError("Ok");
 				}
 				break;
 			case "m-":
 				if (isNaN(value[value.length - 1])) {
-					// error logic
-					console.log("equation must end in a number");
+					changeError("equation must end in a number");
 				} else {
 					this.setState({
 						memory: memory - eval(value)
 					});
+					
+					changeError("Ok");
 				}
 				break;
 			case "mr":
 				this.setState({
 					value: memory
 				});
+				
+				changeError("Ok");
 				break;
 			case "c":
 				this.setState({
 					value: ""
 				});
+				
+				changeError("Ok");
 				break;
 			case "/":
 			case "x":
@@ -65,12 +75,13 @@ class Calculator extends React.Component {
 			case "^":
 			case "%":
 				if (isNaN(value[value.length - 1])) {
-					// error logic
-					console.log("eqautions must not have two consecutive operands");
+					changeError("eqautions must not have two consecutive operands");
 				} else {
 					this.setState({
 						value: value + icon
 					});
+					
+					changeError("Ok");
 				}
 				break;
 			case "7":
@@ -86,6 +97,8 @@ class Calculator extends React.Component {
 				this.setState({
 					value: value + icon
 				});
+
+				changeError("Ok");
 				break;
 			case "<=":
 				this.setState({
@@ -94,28 +107,30 @@ class Calculator extends React.Component {
 				break;
 			case ".":
 				if (isNaN(value[value.length - 1])) {
-					// error logic
-					console.log("decimal point can only be added after a number");
+					changeError("decimal point can only be added after a number");
 				} else {
 					this.setState({
 						value: value + icon
 					});
+
+					changeError("Ok");
 				}
 				break;
 			case "=":
 				if (isNaN(value[value.length - 1])) {
-					// error logic
-					console.log("equation must end in a number");
+					changeError("equation must end in a number");
 				} else {
 					value = value.replace("x", "*").replace("^", "**");
 
 					this.setState({
 						value: eval(value)
 					});
+					
+					changeError("Ok");
 				}
 				break;
 			default:
-				console.log("button not recognised");
+				changeError("button not recognised");
 		}
 	}
 
