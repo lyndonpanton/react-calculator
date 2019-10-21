@@ -12,6 +12,12 @@ class App extends React.Component {
 		};
 	}
 
+	changeError = (message) => {
+		this.setState({
+			name: message
+		});
+	}
+
 	render() {
 		const { error, name } = this.state;
 
