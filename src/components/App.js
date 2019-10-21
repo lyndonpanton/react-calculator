@@ -14,7 +14,7 @@ class App extends React.Component {
 
 	changeError = (message) => {
 		this.setState({
-			name: message
+			error: message
 		});
 	}
 
