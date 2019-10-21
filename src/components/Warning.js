@@ -1,14 +1,23 @@
 import React from "react";
 
 const Warning = (props) => {
+	let backgrounColor;
+	let borderColor;
 
+	if (props.error === "Ok") {
+		backgrounColor = "#088808";
+		borderColor = "#00CCCC";
+	} else {
+		backgrounColor = "#CC0000";
+		borderColor = "#FFAA44";
+	}
 
 	const warningStyling = {
 		margin: "20px auto",
-		border: "#AADDFF solid 2px",
+		border: borderColor + " solid 2px",
 		borderRadius: "4px",
 		padding: 0,
-		backgroundColor: "#323232",
+		backgroundColor: backgrounColor,
 		width: "250px",
 		textAlign: "center"
 	};
@@ -20,7 +29,7 @@ const Warning = (props) => {
 
 	return (
 		<div className="warning" style={warningStyling}>
-			<p style={textStyling}>Ok</p>
+			<p style={textStyling}>{props.error}</p>
 		</div>
 	);
 };
