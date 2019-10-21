@@ -16,24 +16,24 @@
 > 2. Users can have mathematical equations solved
 > 3. Users can see message to help solve syntax errors in mathematical equations
 
-## Requirements
+## Requirements
 > 1. This application requires node to run
 > 2. This application requires npm to run
 > 3. This application requires a browser to run
 > 4. That browser must have JavaScript available and enabled
 
 ## Errors
-> 1. Numbers can contain must that one decimal point is they are not consecutive
+> 1. Numbers can contain more than one decimal point if they are not consecutive
 
 ## Preview
-![Screenshot 1](./images/screenshot1.png)
-![Screenshot 2](./images/screenshot2.png)
-![Screenshot 3](./images/screenshot3.png)
-![Screenshot 4](./images/screenshot4.png)
-![Screenshot 5](./images/screenshot5.png)
-![Screenshot 6](./images/screenshot6.png)
-![Screenshot 7](./images/screenshot7.png)
-![Screenshot 8](./images/screenshot8.png)
+![Screenshot 1](./src/assets/images/screenshot1.png)
+![Screenshot 2](./src/assets/images/screenshot2.png)
+![Screenshot 3](./src/assets/images/screenshot3.png)
+![Screenshot 4](./src/assets/images/screenshot4.png)
+![Screenshot 5](./src/assets/images/screenshot5.png)
+![Screenshot 6](./src/assets/images/screenshot6.png)
+![Screenshot 7](./src/assets/images/screenshot7.png)
+![Screenshot 8](./src/assets/images/screenshot8.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
