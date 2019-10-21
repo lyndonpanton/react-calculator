@@ -26,17 +26,22 @@ class App extends React.Component {
 		const { author, copyright, date, error, name } = this.state;
 
 		const appStyling = {
-			paddingBottom: "10px",
-			backgroundColor: "#454545",
 			color: "#FFFFFF"
+		};
+
+		const mainStyling = {
+			padding: "15px 0",
+			backgroundColor: "#454545"
 		};
 
 		return (
 			<div className="app" style={appStyling}>
 				<header>
 					<Header name={name} />
-					<Warning error={error} />
-					<Calculator error={error} changeError={this.changeError}/>
+					<main style={mainStyling}>
+						<Warning error={error} />
+						<Calculator error={error} changeError={this.changeError}/>
+					</main>
 					<Footer author={author} copyright={copyright} date={date} />
 				</header>
 			</div>
