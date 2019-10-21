@@ -111,7 +111,7 @@ class Calculator extends React.Component {
 
 	render() {
 		const calculatorStyling = {
-			margin: "0 auto",
+			margin: "20px auto",
 			border: "#FF8200 solid 3px",
 			borderRadius: "3px",
 			width: "250px",
