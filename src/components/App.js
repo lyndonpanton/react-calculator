@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Warning from "./Warning";
 import Calculator from "./Calculator";
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
 			<div className="app" style={appStyling}>
 				<header>
 					<Header name={name} />
+					<Warning />
 					<Calculator />
 				</header>
 			</div>
