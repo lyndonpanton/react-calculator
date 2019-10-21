@@ -13,8 +13,14 @@ class App extends React.Component {
 	render() {
 		const { name } = this.state;
 
+		const appStyling = {
+			paddingBottom: "10px",
+			backgroundColor: "#454545",
+			color: "#FFFFFF"
+		};
+
 		return (
-			<div className="app">
+			<div className="app" style={appStyling}>
 				<header>
 					<Header name={name} />
 					<Calculator />
