@@ -2,10 +2,6 @@ import React from "react";
 import Button from "./Button";
 
 class Buttons extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		const buttonsStyling = {
 			"display": "flex",
