@@ -31,8 +31,8 @@ class App extends React.Component {
 			<div className="app" style={appStyling}>
 				<header>
 					<Header name={name} />
-					<Warning error={error}/>
-					<Calculator error={error}/>
+					<Warning error={error} />
+					<Calculator error={error} changeError={this.changeError}/>
 				</header>
 			</div>
 		);
