@@ -7,12 +7,13 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			error: "Ok",
 			name: "React Calculator"
 		};
 	}
 
 	render() {
-		const { name } = this.state;
+		const { error, name } = this.state;
 
 		const appStyling = {
 			paddingBottom: "10px",
@@ -24,8 +25,8 @@ class App extends React.Component {
 			<div className="app" style={appStyling}>
 				<header>
 					<Header name={name} />
-					<Warning />
-					<Calculator />
+					<Warning error={error}/>
+					<Calculator error={error}/>
 				</header>
 			</div>
 		);
