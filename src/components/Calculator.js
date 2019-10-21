@@ -92,6 +92,16 @@ class Calculator extends React.Component {
 					value: value.slice(0, value.length - 1)
 				});
 				break;
+			case ".":
+				if (isNaN(value[value.length - 1])) {
+					// error logic
+					console.log("decimal point can only be added after a number");
+				} else {
+					this.setState({
+						value: value + icon
+					});
+				}
+				break;
 			case "=":
 				if (isNaN(value[value.length - 1])) {
 					// error logic
