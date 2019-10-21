@@ -29,14 +29,24 @@ class Calculator extends React.Component {
 				});
 				break;
 			case "m+":
-				this.setState({
-					memory: memory + eval(value)
-				});
+				if (isNaN(value[value.length - 1])) {
+					// error logic
+					console.log("equation must end in a number");;
+				} else {
+					this.setState({
+						memory: memory + eval(value)
+					});
+				}
 				break;
 			case "m-":
-				this.setState({
-					memory: memory - eval(value)
-				});
+				if (isNaN(value[value.length - 1])) {
+					// error logic
+					console.log("equation must end in a number");
+				} else {
+					this.setState({
+						memory: memory - eval(value)
+					});
+				}
 				break;
 			case "mr":
 				this.setState({
@@ -50,19 +60,28 @@ class Calculator extends React.Component {
 				break;
 			case "/":
 			case "x":
+			case "-":
+			case "+":
+			case "^":
+			case "%":
+				if (isNaN(value[value.length - 1])) {
+					// error logic
+					console.log("eqautions must not have two consecutive operands");
+				} else {
+					this.setState({
+						value: value + icon
+					});
+				}
+				break;
 			case "7":
 			case "8":
 			case "9":
-			case "-":
 			case "4":
 			case "5":
 			case "6":
-			case "+":
 			case "1":
 			case "2":
 			case "3":
-			case "^":
-			case "%":
 			case "0":
 				this.setState({
 					value: value + icon
