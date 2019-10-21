@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Warning from "./Warning";
 import Calculator from "./Calculator";
+import Footer from "./Footer";
 
 class App extends React.Component {
 	constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
 					<Header name={name} />
 					<Warning error={error} />
 					<Calculator error={error} changeError={this.changeError}/>
+					<Footer />
 				</header>
 			</div>
 		);
