@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.css"],"names":[],"mappings":"AAEA,oBACC,YACD,CAEA,UACC,QAAS,CACT,SAAU,CACV,UAAW,CACX,WAAY,CACZ,2BACD","file":"main.9e7366c9.chunk.css","sourcesContent":["@charset \"UTF-8\";\n\n::-webkit-scrollbar {\n\tdisplay: none;\n}\n\nbody, html {\n\tmargin: 0;\n\tpadding: 0;\n\twidth: 100%;\n\theight: 100%;\n\tfont-family: Papyrus, fantasy;\n}"]}
