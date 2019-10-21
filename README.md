@@ -1,3 +1,40 @@
+# React Calculator
+
+## How To Open
+> 1. Install node and npm
+> 2. Open terminal
+> 3. Navigate to the application's folder in the terminal
+> 4. Run the command: _npm start_
+> 5. View the application at _localhost:3000_ in your desired browser
+
+## How To Use
+> 1. Press buttons to create and solve equations
+> 2. View error container to see error messages
+
+## User Stories
+> 1. Users can create mathematical equations
+> 2. Users can have mathematical equations solved
+> 3. Users can see message to help solve syntax errors in mathematical equations
+
+## Requirements
+> 1. This application requires node to run
+> 2. This application requires npm to run
+> 3. This application requires a browser to run
+> 4. That browser must have JavaScript available and enabled
+
+## Errors
+> 1. Numbers can contain must that one decimal point is they are not consecutive
+
+## Preview
+![Screenshot 1](./images/screenshot1.png)
+![Screenshot 2](./images/screenshot2.png)
+![Screenshot 3](./images/screenshot3.png)
+![Screenshot 4](./images/screenshot4.png)
+![Screenshot 5](./images/screenshot5.png)
+![Screenshot 6](./images/screenshot6.png)
+![Screenshot 7](./images/screenshot7.png)
+![Screenshot 8](./images/screenshot8.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
