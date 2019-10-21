@@ -19,7 +19,7 @@ class Calculator extends React.Component {
 	}
 
 	handleClick = (icon) => {
-		let value = this.state.value;
+		let value = String(this.state.value);
 		const memory = this.state.memory;
 
 		switch(icon) {
