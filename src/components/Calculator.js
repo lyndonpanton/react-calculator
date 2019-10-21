@@ -74,7 +74,9 @@ class Calculator extends React.Component {
 			case "+":
 			case "^":
 			case "%":
-				if (isNaN(value[value.length - 1])) {
+				if (value === "") {
+					changeError("eqautions must start with a number");
+				} else if (isNaN(value[value.length - 1])) {
 					changeError("eqautions must not have two consecutive operands");
 				} else {
 					this.setState({
@@ -125,7 +127,7 @@ class Calculator extends React.Component {
 					this.setState({
 						value: eval(value)
 					});
-					
+
 					changeError("Ok");
 				}
 				break;
