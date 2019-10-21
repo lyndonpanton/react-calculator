@@ -8,6 +8,9 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			author: "Lyndon Panton",
+			copyright: "All Rights Reserved",
+			date: (new Date()).getFullYear(),
 			error: "Ok",
 			name: "React Calculator"
 		};
@@ -20,7 +23,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		const { error, name } = this.state;
+		const { author, copyright, date, error, name } = this.state;
 
 		const appStyling = {
 			paddingBottom: "10px",
@@ -34,7 +37,7 @@ class App extends React.Component {
 					<Header name={name} />
 					<Warning error={error} />
 					<Calculator error={error} changeError={this.changeError}/>
-					<Footer />
+					<Footer author={author} copyright={copyright} date={date} />
 				</header>
 			</div>
 		);
